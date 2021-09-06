@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"log"
 	"math/rand"
-	"otus_algo/task04"
+	"otus_algo/task05"
 )
 
 func generateMass(len int) []int {
@@ -49,8 +49,8 @@ func main() {
 	//var a[] int = make([]int, 10)
 	//var a  = []int{1,200,3,4,5,700,4,100}
 
-	var a = generateMass(200)
-	task04.SortShell(a)
+	var a = generateMass(100)
+	task05.HeapSort(a)
 	for idx, val := range a {
 		fmt.Printf("idx = %d val=%d \n", idx, val)
 	}

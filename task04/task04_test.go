@@ -2,6 +2,7 @@ package task04
 
 import (
 	"math/rand"
+	"otus_algo/task05"
 	"sort"
 	"testing"
 )
@@ -37,6 +38,11 @@ func BenchmarkSortShell(b *testing.B) {
 func BenchmarkGo(b *testing.B) {
 	var a = generateMass(20000)
 	sort.Ints(a)
+}
+
+func BenchmarkHeap(b *testing.B) {
+	var a = generateMass(20000)
+	task05.HeapSort(a)
 }
 
 func TestAll(t *testing.T) {
