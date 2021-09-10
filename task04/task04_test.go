@@ -3,6 +3,7 @@ package task04
 import (
 	"math/rand"
 	"otus_algo/task05"
+	"otus_algo/task06"
 	"sort"
 	"testing"
 )
@@ -43,6 +44,11 @@ func BenchmarkGo(b *testing.B) {
 func BenchmarkHeap(b *testing.B) {
 	var a = generateMass(20000)
 	task05.HeapSort(a)
+}
+
+func BenchmarkMergeSort(b *testing.B) {
+	var a = generateMass(20000)
+	task06.MergeSort(a)
 }
 
 func TestAll(t *testing.T) {
